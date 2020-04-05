@@ -12,10 +12,6 @@ $(document).ready(function () {
 });
 
 
-
-
-
-
 function createRow(time) {
     let amPmD;
     if (time < 13) {
