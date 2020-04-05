@@ -41,10 +41,11 @@ function createRow(time) {
 
     let textEl = $("<textarea>").attr("class", "col-sm-9 " + status);
     $(rowDiv).append(textEl);
-    let saveDiv = $("<div>").attr("class", "col-sm-1 saveBtn");
+    let saveDiv = $("<button>").attr("class", "col-sm-1 saveBtn ");
     $(rowDiv).append(saveDiv);
+    $(saveDiv).text("save");
 
-    if(localStorage.getItem("todos")===null){
+    if (localStorage.getItem("todos") === null) {
         let blankData = [
             "",
             "",
@@ -61,20 +62,20 @@ function createRow(time) {
             "",
             ""
         ]
-        localStorage.setItem("todos",JSON.stringify({data: blankData}));
+        localStorage.setItem("todos", JSON.stringify({ data: blankData }));
     } else {
-        
-    }
-  var userInput =JSON.parse(localStorage.getItem("todos")).data;
-   $(textEl).append(userInput[time-7]);
-   
-   $(saveDiv).click(function(event){
-    event.preventDefault();  
-    var userInputA = $(textEl).val();
-    userInput[time-7] = userInputA;
-    localStorage.setItem("todos",JSON.stringify({data: userInput}));
 
-   });
+    }
+    var userInput = JSON.parse(localStorage.getItem("todos")).data;
+    $(textEl).append(userInput[time - 7]);
+
+    $(saveDiv).click(function (event) {
+        event.preventDefault();
+        var userInputA = $(textEl).val();
+        userInput[time - 7] = userInputA;
+        localStorage.setItem("todos", JSON.stringify({ data: userInput }));
+
+    });
 
 
 
