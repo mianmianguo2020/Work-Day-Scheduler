@@ -31,6 +31,6 @@ The following animation demonstrates the application functionality:
 * The URL of the deployed application.
 https://mianmianguo2020.github.io/Work-Day-Scheduler/"
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+* The URL of the GitHub repository. 
 https://github.com/mianmianguo2020/Work-Day-Scheduler
 
